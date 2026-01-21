@@ -3,14 +3,16 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { LayoutDashboard, Folder, Shield, Cpu, Lightbulb, Mail } from 'lucide-react';
+import { LayoutDashboard, Folder, Shield, Cpu, Lightbulb, Mail, Info, BookOpen } from 'lucide-react';
 
 const MENU_ITEMS = [
     { name: 'Overview', path: '/app/overview', icon: LayoutDashboard },
     { name: 'Projects', path: '/app/projects', icon: Folder },
     { name: 'Strategy', path: '/app/strategy', icon: Shield },
     { name: 'Systems', path: '/app/systems', icon: Cpu },
+    { name: 'Methodology', path: '/app/methodology', icon: BookOpen },
     { name: 'Insights', path: '/app/insights', icon: Lightbulb },
+    { name: 'About', path: '/app/about', icon: Info },
     { name: 'Contact', path: '/app/contact', icon: Mail },
 ];
 

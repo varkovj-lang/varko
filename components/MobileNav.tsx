@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { LayoutDashboard, Folder, Shield, Cpu, Lightbulb, Mail, MoreHorizontal, X } from 'lucide-react';
+import { LayoutDashboard, Folder, Shield, Cpu, Lightbulb, Mail, Info, BookOpen, MoreHorizontal, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const MAIN_ITEMS = [
@@ -15,7 +15,9 @@ const MAIN_ITEMS = [
 ];
 
 const SECONDARY_ITEMS = [
+    { name: 'Methodology', path: '/app/methodology', icon: BookOpen },
     { name: 'Insights', path: '/app/insights', icon: Lightbulb },
+    { name: 'About', path: '/app/about', icon: Info },
     { name: 'Contact', path: '/app/contact', icon: Mail },
 ];
 
