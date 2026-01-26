@@ -3,51 +3,81 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { LayoutDashboard, Folder, Shield, Cpu, Lightbulb, Mail, Info, BookOpen } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { LayoutDashboard, Lightbulb, Mail, ArrowRight } from 'lucide-react';
 
 const MENU_ITEMS = [
-    { name: 'Overview', path: '/app/overview', icon: LayoutDashboard },
-    { name: 'Projects', path: '/app/projects', icon: Folder },
-    { name: 'Strategy', path: '/app/strategy', icon: Shield },
-    { name: 'Systems', path: '/app/systems', icon: Cpu },
-    { name: 'Methodology', path: '/app/methodology', icon: BookOpen },
-    { name: 'Insights', path: '/app/insights', icon: Lightbulb },
-    { name: 'About', path: '/app/about', icon: Info },
-    { name: 'Contact', path: '/app/contact', icon: Mail },
+    { name: 'VARKO', path: '/', icon: LayoutDashboard },
+    { name: 'Insights', path: '/insights', icon: Lightbulb },
+    { name: 'Contact', path: '/contact', icon: Mail },
 ];
 
 export function Sidebar() {
     const pathname = usePathname();
 
     return (
-        <aside className="fixed left-0 top-0 h-screen w-64 bg-sidebar text-sidebar-foreground hidden md:flex flex-col border-r border-border">
-            <div className="p-8 pb-12">
-                <h1 className="text-2xl font-bold tracking-widest text-white uppercase">VARKO</h1>
+        <aside className="fixed left-0 top-0 h-screen w-64 bg-black text-sidebar-foreground hidden md:flex flex-col border-r border-white/5 z-50">
+            {/* Logo Section */}
+            <div className="p-10">
+                <Link href="/" className="group inline-block">
+                    <h1 className="text-3xl font-bold tracking-[0.2em] text-white uppercase transition-transform duration-500 group-hover:scale-105">
+                        VARKO
+                    </h1>
+                    <div className="h-[2px] w-0 bg-emerald-500 transition-all duration-500 group-hover:w-full mt-1"></div>
+                </Link>
             </div>
 
-            <nav className="flex-1 px-4 space-y-2">
+            {/* Navigation Menu */}
+            <nav className="flex-1 px-6 space-y-4 pt-10">
+                <div className="text-[10px] uppercase tracking-[0.3em] text-zinc-600 font-mono mb-8 px-4">
+                    Menu Principal
+                </div>
                 {MENU_ITEMS.map((item) => {
-                    const isActive = pathname.startsWith(item.path);
+                    const isHome = item.path === '/';
+                    const isActive = isHome ? pathname === '/' : pathname.startsWith(item.path);
+
                     return (
                         <Link
                             key={item.path}
                             href={item.path}
                             className={cn(
-                                "group flex items-center gap-4 px-4 py-3 text-sm font-medium tracking-wide uppercase transition-colors duration-200",
+                                "group relative flex items-center gap-4 px-4 py-3 text-xs font-medium tracking-[0.2em] uppercase transition-all duration-500 rounded-sm",
                                 isActive
-                                    ? "text-sidebar-active"
-                                    : "text-sidebar-foreground hover:text-white"
+                                    ? "text-white bg-white/5 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)]"
+                                    : "text-zinc-500 hover:text-white hover:bg-white/[0.02]"
                             )}
                         >
-                            <item.icon className={cn("w-4 h-4 transition-colors", isActive ? "text-white" : "text-sidebar-foreground group-hover:text-white")} />
-                            {item.name}
+                            {isActive && (
+                                <motion.div
+                                    layoutId="sidebar-active"
+                                    className="absolute left-0 w-1 h-2/3 bg-emerald-500 rounded-full"
+                                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                />
+                            )}
+                            <item.icon className={cn(
+                                "w-4 h-4 transition-all duration-500",
+                                isActive ? "text-emerald-500 scale-110" : "group-hover:text-emerald-400 group-hover:scale-110"
+                            )} />
+                            <span>{item.name}</span>
+                            {!isActive && (
+                                <ArrowRight className="w-3 h-3 ml-auto opacity-0 -translate-x-2 transition-all duration-500 group-hover:opacity-40 group-hover:translate-x-0" />
+                            )}
                         </Link>
                     );
                 })}
             </nav>
 
-            <div className="p-8 text-xs text-muted-foreground uppercase tracking-widest opacity-50">
-                Internal System
+            {/* Sidebar Footer */}
+            <div className="p-10 space-y-4">
+                <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                <div className="flex flex-col gap-2">
+                    <span className="text-[10px] text-zinc-700 tracking-[0.4em] uppercase font-mono">
+                        V3.5 INTERNAL
+                    </span>
+                    <span className="text-[9px] text-zinc-800 tracking-[0.1em] uppercase font-mono leading-tight">
+                        Protocolo de Eficiencia Activo
+                    </span>
+                </div>
             </div>
         </aside>
     );

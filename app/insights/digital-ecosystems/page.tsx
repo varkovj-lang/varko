@@ -7,21 +7,21 @@ export default function DigitalEcosystemsPage() {
             {/* Navigation */}
             <header className="space-y-8">
                 <Link
-                    href="/app/insights"
+                    href="/insights"
                     className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-white transition-colors group"
                 >
                     <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                    Back to Insights
+                    Volver a Insights
                 </Link>
 
                 <div className="space-y-4">
                     <div className="flex items-center gap-4 text-xs text-zinc-500 uppercase tracking-widest font-mono">
                         <span className="text-zinc-300">Filosofía</span>
                         <div className="h-px w-8 bg-zinc-800"></div>
-                        <span>Sep 15, 2025</span>
+                        <span>15 Sep, 2025</span>
                     </div>
                     <h1 className="text-3xl md:text-5xl font-light text-white leading-tight tracking-tight">
-                        Digital Ecosystems
+                        Ecosistemas Digitales
                     </h1>
                 </div>
             </header>
@@ -63,7 +63,7 @@ export default function DigitalEcosystemsPage() {
                 <ul className="list-none space-y-2 pl-0">
                     <li className="flex items-center gap-3">
                         <div className="w-1.5 h-1.5 bg-zinc-700 rounded-full"></div>
-                        <span>Ajusta mensajes según la intencón del usuario</span>
+                        <span>Ajusta mensajes según la intención del usuario</span>
                     </li>
                     <li className="flex items-center gap-3">
                         <div className="w-1.5 h-1.5 bg-zinc-700 rounded-full"></div>

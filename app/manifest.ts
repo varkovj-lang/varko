@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
         name: 'VARKO System',
         short_name: 'VARKO',
         description: 'Sistema Estratégico Interno',
-        start_url: '/app/overview',
+        start_url: '/',
         display: 'standalone',
         background_color: '#000000',
         theme_color: '#000000',

@@ -13,11 +13,11 @@ export default function InsightsPage() {
             </header>
 
             <FeaturedInsight
-                date="Jan 20, 2026"
+                date="20 Ene, 2026"
                 category="Automatización"
-                title="Automation Without Fragility"
+                title="Automatización Sin Fragilidad"
                 description="La automatización mal diseñada crea sistemas rápidos… pero frágiles. Funcionan hasta que algo cambia. Y en un mercado que cambia constantemente, la fragilidad no escala."
-                href="/app/insights/automation-without-fragility"
+                href="/insights/automation-without-fragility"
             />
 
             <div className="space-y-8">
@@ -28,32 +28,32 @@ export default function InsightsPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <InsightCard
-                        date="Oct 12, 2025"
+                        date="12 Oct, 2025"
                         category="Estrategia"
-                        title="Structure Precedes Growth"
-                        description="El crecimiento no se construye a punta de anuncios. Se construye con criterio. La estructura precede al crecimiento."
-                        href="/app/insights/structure-precedes-growth"
+                        title="La Estructura Precede al Crecimiento"
+                        description="El crecimiento no se construye a base de anuncios. Se construye con criterio. La estructura precede al crecimiento."
+                        href="/insights/structure-precedes-growth"
                     />
                     <InsightCard
-                        date="Sep 28, 2025"
+                        date="28 Sep, 2025"
                         category="Ingeniería"
-                        title="Code as Infrastructure"
+                        title="El Código como Infraestructura"
                         description="Por qué tratamos el código frontend como una inversión de capital y no como un gasto operativo. La deuda técnica es un pasivo financiero real."
-                        href="/app/insights/code-as-infrastructure"
+                        href="/insights/code-as-infrastructure"
                     />
                     <InsightCard
-                        date="Sep 15, 2025"
+                        date="15 Sep, 2025"
                         category="Filosofía"
-                        title="Digital Ecosystems"
+                        title="Ecosistemas Digitales"
                         description="Más allá de las landing pages. Construyendo entornos digitales vivos que reaccionan al comportamiento del usuario en tiempo real."
-                        href="/app/insights/digital-ecosystems"
+                        href="/insights/digital-ecosystems"
                     />
                     <InsightCard
-                        date="Aug 30, 2025"
+                        date="30 Ago, 2025"
                         category="Automatización"
-                        title="The Automator's Dilemma"
-                        description="Cuándo automatizar y cuándo mantener el toque humano. Un framework de decisión para escalar operaciones sin perder alma."
-                        href="/app/insights/the-automators-dilemma"
+                        title="El Dilema del Automatizador"
+                        description="Cuándo automatizar y cuándo mantener el toque humano. Un framework de decisión para escalar operaciones sin perder el alma."
+                        href="/insights/the-automators-dilemma"
                     />
                 </div>
             </div>

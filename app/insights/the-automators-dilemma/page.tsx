@@ -7,21 +7,21 @@ export default function AutomatorsDilemmaPage() {
             {/* Navigation */}
             <header className="space-y-8">
                 <Link
-                    href="/app/insights"
+                    href="/insights"
                     className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-white transition-colors group"
                 >
                     <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                    Back to Insights
+                    Volver a Insights
                 </Link>
 
                 <div className="space-y-4">
                     <div className="flex items-center gap-4 text-xs text-zinc-500 uppercase tracking-widest font-mono">
                         <span className="text-amber-500/80">Automatización</span>
                         <div className="h-px w-8 bg-zinc-800"></div>
-                        <span>Aug 30, 2025</span>
+                        <span>30 Ago, 2025</span>
                     </div>
                     <h1 className="text-3xl md:text-5xl font-light text-white leading-tight tracking-tight">
-                        The Automator’s Dilemma
+                        El Dilema del Automatizador
                     </h1>
                 </div>
             </header>

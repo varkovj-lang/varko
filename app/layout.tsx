@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Sidebar } from "@/components/Sidebar";
+import { MobileNav } from "@/components/MobileNav";
+import { PageTransition } from "@/components/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,18 +57,31 @@ export const viewport = {
   userScalable: false,
 };
 
+import { FloatingMenu } from "@/components/FloatingMenu";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-black text-foreground selection:bg-emerald-500 selection:text-black tracking-tight`}
         suppressHydrationWarning
       >
-        {children}
+        <div className="flex flex-col md:flex-row min-h-screen">
+          <Sidebar />
+          <MobileNav />
+          <FloatingMenu />
+          <main className="flex-1 md:ml-64 p-8 md:p-12 lg:p-16 pb-32 md:pb-12 lg:pb-16 transition-all duration-300 ease-out">
+            <div className="max-w-7xl mx-auto">
+              <PageTransition>
+                {children}
+              </PageTransition>
+            </div>
+          </main>
+        </div>
       </body>
     </html>
   );

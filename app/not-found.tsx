@@ -23,8 +23,8 @@ export default function NotFound() {
                     <div className="flex flex-col gap-4">
                         <p className="text-xs font-mono text-zinc-600 uppercase tracking-widest">Acción Sugerida</p>
                         <Link
-                            href="/app/overview"
-                            className="inline-flex items-center gap-3 text-white hover:text-zinc-300 transition-colors group"
+                            href="/"
+                            className="inline-flex items-center gap-2 group text-xs uppercase tracking-widest text-border-hover transition-colors"
                         >
                             <span className="font-mono text-xs text-zinc-700 group-hover:text-zinc-500">→</span>
                             <span className="text-sm font-medium tracking-tight">Regresar al Panel de Control</span>

@@ -7,21 +7,21 @@ export default function CodeAsInfrastructurePage() {
             {/* Navigation */}
             <header className="space-y-8">
                 <Link
-                    href="/app/insights"
+                    href="/insights"
                     className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-white transition-colors group"
                 >
                     <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                    Back to Insights
+                    Volver a Insights
                 </Link>
 
                 <div className="space-y-4">
                     <div className="flex items-center gap-4 text-xs text-zinc-500 uppercase tracking-widest font-mono">
                         <span className="text-blue-400/80">Ingeniería</span>
                         <div className="h-px w-8 bg-zinc-800"></div>
-                        <span>Sep 28, 2025</span>
+                        <span>28 Sep, 2025</span>
                     </div>
                     <h1 className="text-3xl md:text-5xl font-light text-white leading-tight tracking-tight">
-                        Code as Infrastructure
+                        El Código como Infraestructura
                     </h1>
                 </div>
             </header>
