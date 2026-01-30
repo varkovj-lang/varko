@@ -58,6 +58,7 @@ export const viewport = {
 };
 
 import { FloatingMenu } from "@/components/FloatingMenu";
+import { Preloader } from "@/components/Preloader";
 
 export default function RootLayout({
   children,
@@ -70,6 +71,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-black text-foreground selection:bg-emerald-500 selection:text-black tracking-tight`}
         suppressHydrationWarning
       >
+        <Preloader />
         <div className="flex flex-col md:flex-row min-h-screen">
           <Sidebar />
           <MobileNav />
