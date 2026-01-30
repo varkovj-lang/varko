@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { LayoutDashboard, Lightbulb, Mail, ArrowRight } from 'lucide-react';
+import { InstallApp } from './InstallApp';
 
 const MENU_ITEMS = [
     { name: 'VARKO', path: '/', icon: LayoutDashboard },
@@ -70,7 +71,8 @@ export function Sidebar() {
             {/* Sidebar Footer */}
             <div className="p-10 space-y-4">
                 <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-                <div className="flex flex-col gap-2">
+                <InstallApp variant="sidebar" />
+                <div className="flex flex-col gap-2 pt-2">
                     <span className="text-[10px] text-zinc-700 tracking-[0.4em] uppercase font-mono">
                         V3.5 INTERNAL
                     </span>

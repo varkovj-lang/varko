@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { LayoutDashboard, Lightbulb, Mail, Command } from 'lucide-react';
+import { InstallApp } from './InstallApp';
 
 const MAIN_ITEMS = [
     { name: 'VARKO', path: '/', icon: LayoutDashboard },
@@ -29,7 +30,10 @@ export function MobileNav() {
                     <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
                     <h1 className="text-sm font-bold tracking-[0.4em] text-white uppercase">VARKO</h1>
                 </Link>
-                <div className="text-[9px] font-mono text-zinc-600 uppercase tracking-widest">v3.5 Build</div>
+                <div className="flex items-center gap-4">
+                    <div className="text-[9px] font-mono text-zinc-600 uppercase tracking-widest hidden sm:block">v3.5 Build</div>
+                    <InstallApp variant="mobile" />
+                </div>
             </header>
 
             {/* Bottom Tab Bar (Glassy) */}

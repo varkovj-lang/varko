@@ -16,6 +16,7 @@ import {
     ChevronRight,
     Lock
 } from 'lucide-react';
+import { InstallApp } from './InstallApp';
 
 const NODES = [
     { name: 'VARKO Main', path: '/', icon: LayoutDashboard, description: 'Panel de control principal del sistema' },
@@ -140,6 +141,7 @@ export function FloatingMenu() {
                                             </Link>
                                         );
                                     })}
+                                    <InstallApp variant="floating" />
                                 </div>
                             </div>
 
