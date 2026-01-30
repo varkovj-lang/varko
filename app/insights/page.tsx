@@ -13,11 +13,11 @@ export default function InsightsPage() {
             </header>
 
             <FeaturedInsight
-                date="20 Ene, 2026"
-                category="Automatización"
-                title="Automatización Sin Fragilidad"
-                description="La automatización mal diseñada crea sistemas rápidos… pero frágiles. Funcionan hasta que algo cambia. Y en un mercado que cambia constantemente, la fragilidad no escala."
-                href="/insights/automation-without-fragility"
+                date="29 Ene, 2026"
+                category="Filosofía"
+                title="El Sistema VARKO"
+                description="Cómo se construyen máquinas digitales que no se rompen cuando el negocio crece. Una radiografía sobre el diseño de infraestructuras digitales escalables."
+                href="/insights/el-sistema-varko"
             />
 
             <div className="space-y-8">
@@ -27,6 +27,13 @@ export default function InsightsPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <InsightCard
+                        date="20 Ene, 2026"
+                        category="Automatización"
+                        title="Automatización Sin Fragilidad"
+                        description="La automatización mal diseñada crea sistemas rápidos… pero frágiles. Funcionan hasta que algo cambia."
+                        href="/insights/automation-without-fragility"
+                    />
                     <InsightCard
                         date="12 Oct, 2025"
                         category="Estrategia"

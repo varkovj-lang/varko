@@ -1,18 +1,26 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { ShareArticle } from '@/components/insights/ShareArticle';
 
 export default function AutomationWithoutFragilityPage() {
     return (
         <article className="max-w-3xl mx-auto space-y-12 pb-20 animate-in fade-in duration-700">
             {/* Navigation */}
             <header className="space-y-8">
-                <Link
-                    href="/insights"
-                    className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-white transition-colors group"
-                >
-                    <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                    Volver a Insights
-                </Link>
+                <div className="flex items-center justify-between">
+                    <Link
+                        href="/insights"
+                        className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-white transition-colors group"
+                    >
+                        <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+                        Volver a Insights
+                    </Link>
+                    <ShareArticle
+                        title="Automatización Sin Fragilidad"
+                        text="La automatización mal diseñada crea sistemas rápidos… pero frágiles. Funcionan hasta que algo cambia."
+                        url="/insights/automation-without-fragility"
+                    />
+                </div>
 
                 <div className="space-y-4">
                     <div className="flex items-center gap-4 text-xs text-zinc-500 uppercase tracking-widest font-mono">

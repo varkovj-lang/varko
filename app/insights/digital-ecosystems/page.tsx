@@ -1,18 +1,26 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { ShareArticle } from '@/components/insights/ShareArticle';
 
 export default function DigitalEcosystemsPage() {
     return (
         <article className="max-w-3xl mx-auto space-y-12 pb-20 animate-in fade-in duration-700">
             {/* Navigation */}
             <header className="space-y-8">
-                <Link
-                    href="/insights"
-                    className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-white transition-colors group"
-                >
-                    <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                    Volver a Insights
-                </Link>
+                <div className="flex items-center justify-between">
+                    <Link
+                        href="/insights"
+                        className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground hover:text-white transition-colors group"
+                    >
+                        <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+                        Volver a Insights
+                    </Link>
+                    <ShareArticle
+                        title="Ecosistemas Digitales"
+                        text="Más allá de las landing pages. Construyendo entornos digitales vivos que reaccionan al comportamiento del usuario en tiempo real."
+                        url="/insights/digital-ecosystems"
+                    />
+                </div>
 
                 <div className="space-y-4">
                     <div className="flex items-center gap-4 text-xs text-zinc-500 uppercase tracking-widest font-mono">
